@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        if (localStorage.getItem("name")){
+            let a = localStorage.getItem("name")
+            document.write("welcome " + a)   
+        }
+        else{
+            let a = prompt("enter your name")
+            localStorage.setItem("name" , a)
+            document.write("welcome " + a)
+        }
+        // localStorage.setItem("name" , a) -->> we can save the name in localstorage by using this syntax and the name saved under name key so whenever we call name it access the name we saved
+
+        let a = {
+            "harry" : 1,
+            "rohan" : 69
+        }
+        JSON.stringify(a)
+        // JSON.stringify(a) -->> using stringify we can convert a object into string throug JSON
+
+        localStorage.setItem("guys",JSON.stringify(a))
+        // localStorage.getItem("guys",JSON.stringify(a)) -->> using this syntax we can access the saved object and to print the content inside the object we have to use the convert string method JSON.stringify(a)
+        localStorage.getItem("guys")
+        
+        JSON.parse(localStorage.getItem("guys"))
+        // JSON.parse(localStorage.getItem("guys")) -->> using this syntax we can again convert the string back to object using JSON.parse 
+
+    </script>
+</body>
+</html>

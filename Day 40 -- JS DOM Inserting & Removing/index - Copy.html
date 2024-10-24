@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container red bg-green">
+        <div class="box" style="display: flex;" data-createby="harry" data-conceptby="rohan">i am a box</div>
+        <div class="box">i am a box</div>
+    </div>
+
+    <div class="box1" hidden>i am hidden box</div>
+    <!--
+     <div class="box1" hidden>i am hidden box</div> 
+     using hidden attribute we can make the div hidden and 
+    -->
+
+    <script>
+        let cont = document.querySelector(".container")
+
+
+        // cont.insertAdjacentHTML("afterend" , "<b> i am unnder the water , please save me</b>")
+        // afterend make the html place after the container
+
+        // cont.insertAdjacentHTML("afterbegin" , "<b> i am unnder the water , please save me</b>")
+        // afterbeginmake the html place at the 1st position inside the container means the html is place right after the container
+
+        // cont.insertAdjacentHTML("beforebegin" , "<b> i am unnder the water , please save me</b>")
+        // beforebegin make the html place before the container means at first will be this html syntax then container
+
+        cont.insertAdjacentHTML("beforeend" , "<b> i am unnder the water , please save me</b>")
+        // beforeend makes the html syntax place at the end inside the container , means before ending the cotainer
+
+        // for text and element same properties will apply inserting, insertAdjacentElement and insertAdjacentText
+
+        console.log(document.querySelector(".box").remove())
+        // console.log(document.querySelector(".box").remove()) -->> using remove we can delete the 1st div element which class is box under the container
+
+
+        console.log(document.querySelector(".container").classList)
+        // console.log(document.querySelector(".container").classList) -->> using classList we can show how many class values have an element and it represent i a list format
+
+        console.log(document.querySelector(".container").className)  
+        // console.log(document.querySelector(".container").className) -->> using classname we show the class values
+
+
+        document.querySelector(".container").classList.add("harry")
+        // document.querySelector(".container").classList.add("harry") -->> using add we can add extra class to an element also add is apply through classlist without classlist we can't use add
+
+
+        document.querySelector(".container").classList.remove("harry")
+        // document.querySelector(".container").classList.remove("harry") -->> using remove we can delete any class
+
+
+        document.querySelector(".container").classList.toggle("red")
+        // document.querySelector(".container").classList.toggle("red") -->> using toggle we can add class if that class doesn't exist and if the class exist then we can remove that class, toggle can perform two operation at the same time
+    </script>
+</body>
+</html>

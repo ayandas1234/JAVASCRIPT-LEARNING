@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="display: flex;" data-createby="harry" data-conceptby="rohan">i am a box</div>
+        <div class="box">i am a box</div>
+    </div>
+
+    <div class="box1" hidden>i am hidden box</div>
+    <!--
+     <div class="box1" hidden>i am hidden box</div> 
+     using hidden attribute we can make the div hidden and 
+    -->
+
+
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+        let div = document.createElement("div");
+        // let div = document.createElement("div"); -->> using createElement("div") we can create a div tag element
+
+        div.innerHTML = "i have been iserted <b> by harry </b>";
+        // div.innerHTML = "i have been iserted <b> by harry </b>"; -->> using innerHTML we insert a text cotent inside the div
+
+        div.setAttribute("class" , "created");
+        // div.setAttribute("class" , "created"); -->> using setAttribute we create a class name created for the div
+
+
+        document.querySelector(".container").append(div);
+        // document.querySelector(".container").append(div); -->> using querySelector we first select the container class div then using append we insert the div inside the container class div
+
+        // if we insert anything uusing append then the element or text placed at the end of node
+
+        document.querySelector(".container").before(div);
+        // document.querySelector(".container").before(div); -->> using before the div placed before the container
+
+
+        document.querySelector(".container").after(div);
+        // document.querySelector(".container").after(div); -->> using after the div placed after the container
+
+
+        document.querySelector(".container").prepend(div);
+        // document.querySelector(".container").prepend(div); -->> using prepend the div placed at 1st position inside the container
+
+
+        document.querySelector(".container").replaceWith(div);
+        // document.querySelector(".container").replaceWith(div); -->> using replaceWith we replace the container with div now the container no more existed
+    </script>
+</body>
+</html>
